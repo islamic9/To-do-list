@@ -65,6 +65,15 @@
   animation: removeItem 0.3s ease-in-out forwards;
 }
 
+.prompt-wrapper {
+  margin: auto;
+  width: 90%;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: #949494 0 0 8px;
+  background: gold;
+}
+
 @keyframes removeItem {
   to {
     transform: translateX(-100%);

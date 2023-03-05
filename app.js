@@ -29,9 +29,14 @@ $taskContainer.addEventListener('click', (e) => {
         e.target.parentElement.previousSibling.classList.toggle("completed")
     }
     else if(e.target.className.includes("delete")){
-        const isAgreedToDelete = document.createElement("div");
-        isAgreedToDelete.className = "prompt"
-        console.log('isAgreedToDelete');
+
+        const promptWrapper = document.querySelector("#prompt-wrapper");
+        const itemsWrapper = document.createElement("p");
+            itemsWrapper.className = "prompt-text"
+
+            promptWrapper.appendChild(itemsWrapper)
+
+
         if(isAgreedToDelete){
             e.target.parentElement.parentElement.classList.add("remove-item")
             setTimeout(() => {
@@ -57,3 +62,7 @@ $taskContainer.addEventListener('click', (e) => {
         console.log(bosilmadi);
     }
 })
+
+//  e.target.className.includes("delete")
+
+
